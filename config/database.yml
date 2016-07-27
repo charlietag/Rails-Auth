@@ -16,11 +16,10 @@ default: &default
 
   username: root
   password: <%= ENV['RAILS-AUTH_DATABASE_PASSWORD'] %>
-  database: rails-auth
 
 development:
   <<: *default
-  #database: Rails-Auth_development
+  database: rails-auth-dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  database: rails-auth-prod
   #database: Rails-Auth_production
   #username: Rails-Auth
   #password: <%= ENV['RAILS-AUTH_DATABASE_PASSWORD'] %>
